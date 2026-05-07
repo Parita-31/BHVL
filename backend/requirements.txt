@@ -5,3 +5,5 @@ python-dotenv
 faster-whisper
 groq
 sqlalchemy
+gTTS
+python-multipart
