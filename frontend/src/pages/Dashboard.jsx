@@ -30,7 +30,7 @@ function Dashboard() {
 
   const handleConfirm = async (response) => {
     try {
-      const res = await axios.post("http://127.0.0.1:8000/confirm", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/confirm`, {
         response,
         id: result?.id, // Added ID for DB update
       });
@@ -162,7 +162,7 @@ function Dashboard() {
                   <p style={{ fontSize: "1.25rem", fontWeight: "500", margin: "0 0 20px 0", color: "white" }}>{result.restated}</p>
                   
                   <audio controls autoPlay style={{ width: "100%", height: "45px", borderRadius: "8px", outline: "none", filter: "invert(1) hue-rotate(180deg) brightness(1.5)" }}>
-                    <source src={`http://127.0.0.1:8000/audio/${result.audio}`} />
+                    <source src={`${import.meta.env.VITE_API_URL}/audio/${result.audio}`} />
                   </audio>
                 </motion.div>
 
