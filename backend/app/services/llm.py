@@ -24,7 +24,7 @@ async def analyze_audio(audio_data: bytes, mime_type: str = "audio/webm"):
             "emotion": "Unknown",
             "restated": "Groq API key missing. Check backend/.env file."
         }
-x``
+
     try:
         # Step 1: Transcribe Audio using Whisper
         filename = "audio.webm"
