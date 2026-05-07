@@ -10,7 +10,7 @@ function Logs() {
   const fetchLogs = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://127.0.0.1:8000/logs");
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/logs`)
       setLogs(res.data);
     } catch (err) {
       console.error("Failed to fetch logs", err);
